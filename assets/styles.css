@@ -1,0 +1,70 @@
+:root {
+    /* colors: */
+    --primary: #DC5F00;
+    --dark: #373A40;
+    --darker: #232529;
+    --gray: #686D76;
+    --light: #EEEEEE;
+
+    /* font sizes */
+    --normal: 1.875rem;
+    --medium: 2.5rem;
+    --large: 3.125rem
+}
+
+/* fonts: */
+
+@font-face {
+    font-family: 'Mazzard';
+    src: url('/fonts/MazzardM-Regular.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard';
+    src: url('/fonts/MazzardM-Bold.otf') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard';
+    src: url('/fonts/MazzardM-ExtraBold.otf') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Mazzard', sans-serif;
+}
+
+/* text: */
+
+h1 {
+    font-size: var(--large)
+}
+
+h2 {
+    font-size: var(--medium);
+}
+
+p {
+    font-size: var(--normal);
+}
+
+.highlight {
+    color: var(--primaryColor);
+}
+
+/* helpers */
+
+.center-align {
+    display: flex;
+    justify-content: center;
+}

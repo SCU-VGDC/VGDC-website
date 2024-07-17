@@ -6,13 +6,13 @@
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/">Project D</a>
-      <a href="#join">Join Us</a>
+      <a @click="goToSection('join')" rel="nofollow">Join Us</a>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-
+  import { goToSection } from '~/constants/index';
 </script>
 
 <style scoped>
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 50px;
     padding: 10px;
   }
 
@@ -35,6 +35,8 @@
     text-decoration: none;
     font-size: var(--medium);
     font-weight: bold;
+
+    cursor: pointer;
   }
 
   a.logo {

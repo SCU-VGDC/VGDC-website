@@ -25,4 +25,8 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+
+  modules: [
+    '@nuxt/image',
+  ]
 })

@@ -39,6 +39,6 @@
     
     text-align: center;
 
-    padding: 20px;
+    margin: 0px;
   }
 </style>

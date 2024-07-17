@@ -39,7 +39,7 @@
         <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item3">
-          Our club meets weekly in <a href="" target="_blank">LC 203</a> from 5:00 pm to 7:00 pm. Feel free to stop 
+          Our club meets weekly in <a href="https://www.scu.edu/map/l/Learning-Commons-and-Library" target="_blank">LC 203</a> from 5:00 pm to 7:00 pm. Feel free to stop 
           by :) No experience needed!
         </p>
       </div>
@@ -60,7 +60,65 @@
     </Banner>
 
     <section class="about">
-      
+      <div class="entry">
+        <h2 class="item1" style="text-align: center;">Game Design</h2>
+        <NuxtImg class="item3" src="/images/home/level_design.png" :sizes="imgEntrySizes"/>
+
+        <p class="item4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="entry">
+        <h2 class="item2" style="text-align: center;">Art</h2>
+        <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
+
+        <p class="item3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="entry">
+        <h2 class="item1" style="text-align: center;">Programming</h2>
+        <NuxtImg class="item3" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
+
+        <p class="item4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="entry">
+        <h2 class="item2" style="text-align: center;">Sound Design</h2>
+        <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
+
+        <p class="item3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="entry">
+        <h2 class="item1" style="text-align: center;">World Building</h2>
+        <NuxtImg class="item3" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
+
+        <p class="item4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
     </section>
 
     <Footer></Footer>

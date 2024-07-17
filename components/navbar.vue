@@ -4,6 +4,7 @@
 
     <div style="display:flex; gap: 60px;">
       <a href="/">Home</a>
+      <a href="/about">About</a>
       <a href="/">Project D</a>
       <a href="#join">Join Us</a>
     </div>

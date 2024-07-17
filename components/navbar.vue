@@ -2,7 +2,7 @@
   <div class="container">
     <a class="logo" href="/">VGDC</a>
 
-    <div style="display:flex; gap: 60px;">
+    <div style="display: flex; gap: 60px;">
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/">Project D</a>

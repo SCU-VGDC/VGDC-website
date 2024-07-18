@@ -22,7 +22,6 @@ export const LINKS: Record<string, Link> = {
 
 // Functions:
 export function goToSection(sectionID: string) {
-    console.log(sectionID);
     const element = document.getElementById(sectionID);
 
     window.scrollTo({

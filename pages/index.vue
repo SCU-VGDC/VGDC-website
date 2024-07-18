@@ -143,7 +143,7 @@
         this.logoGameWidth = window.innerWidth;
         this.logoGameHeight = window.innerHeight - 60;
 
-        console.log(`${this.logoGameWidth} ${this.logoGameHeight}`);
+        //console.log(`${this.logoGameWidth} ${this.logoGameHeight}`);
       }
     },
     computed: {

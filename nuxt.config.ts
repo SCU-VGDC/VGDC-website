@@ -14,6 +14,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
+      script: [
+        {src: 'decomp.js'},
+        {src: 'pathseg.js'},
+      ]
     },
   },
 

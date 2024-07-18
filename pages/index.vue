@@ -1,9 +1,10 @@
 <template>
   <div>
-    <Navbar></Navbar>
+    <NavBar></NavBar>
     
-    <section class="hero">
-      <h1 style="font-size: 18.75rem; font-weight: 800; text-align: center;">VGDC</h1>
+    <section class="hero" id="hero">
+      <!-- <h1 style="font-size: 18.75rem; font-weight: 800; text-align: center;">VGDC</h1> -->
+       <LogoGame :width="logoGameWidth" :height="logoGameHeight"></LogoGame>
     </section>
 
     <Banner background_image="/images/home/Lust_Arena.jpg">
@@ -131,14 +132,33 @@
 
 <script lang="ts">
   export default {
+    data: () => {
+      return {
+        logoGameWidth: 100,
+        logoGameHeight: 100,
+      };
+    },
+    methods: {
+      checkScreenSize() {
+        this.logoGameWidth = window.innerWidth;
+        this.logoGameHeight = window.innerHeight - 60;
+
+        console.log(`${this.logoGameWidth} ${this.logoGameHeight}`);
+      }
+    },
     computed: {
-      LINKS() {
-        return LINKS;
-      },
       imgEntrySizes(): string {
         return "md:500px"
       },
     },
+    mounted() {
+      // change values based on screen size
+      this.checkScreenSize();
+      window.addEventListener("resize", this.checkScreenSize);
+    },
+    unmounted() {
+      window.removeEventListener("resize", this.checkScreenSize);
+    }
   }
 </script>
 

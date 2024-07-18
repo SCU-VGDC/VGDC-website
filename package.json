@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
+    "@types/matter-js": "^0.19.7",
+    "matter-js": "^0.20.0",
     "nuxt": "^3.12.3",
+    "poly-decomp": "^0.3.0",
     "vue": "latest"
   }
 }

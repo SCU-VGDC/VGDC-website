@@ -38,12 +38,18 @@
     font-display: swap;
 }
 
+
 body {
     background-color: var(--dark);
     color: var(--light);
     font-family: 'Mazzard', sans-serif;
 
     margin: 0px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* text: */

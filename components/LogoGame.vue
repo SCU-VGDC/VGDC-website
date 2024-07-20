@@ -98,7 +98,7 @@
         showVertexNumbers: false,
         showConvexHulls: false,
         showInternalEdges: false,
-        showMousePosition: true
+        showMousePosition: false
       }
 
       // create a renderer
@@ -155,6 +155,7 @@
         render: {
           fillStyle: darkColor,
         },
+        mass: 10,
         restitution: 0.8,
       };
       let objects = Array(numObjects)
@@ -182,13 +183,17 @@
       }
 
       // silly object
-      const sillyObject = Bodies.circle(width / 2, 0, 75, {render: {
-        sprite: {
-          xScale: 0.19,
-          yScale: 0.19,
-          texture: '/game/Important Image Cropped.png',
-        }
-      }})
+      const sillyObject = Bodies.circle(width / 2, 0, 75, {
+        restitution: 0.8, 
+        mass: 100,
+        render: {
+          sprite: {
+            xScale: 0.19,
+            yScale: 0.19,
+            texture: '/game/Important Image Cropped.png',
+          },
+        },
+      });
 
       // TODO: create VGDC logo body
       const logoCenterX = width / 2;
@@ -209,7 +214,7 @@
       var mouseOptions = {
         mouse: canvasMouse,
         constraint: {
-          stiffness: 0.5,
+          stiffness: 0.1,
           render: {
             visible: false,
           },

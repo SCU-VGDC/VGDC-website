@@ -82,10 +82,14 @@
         <NuxtImg class="item3" src="/images/home/level_design.png" :sizes="imgEntrySizes"/>
 
         <p class="item4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We collaborate, discuss, and iterate on current projects in order to design fun and immersive games. 
+          We collaborate with our art, audio, and world building teams to discuss what gameplay features would 
+          corroborate with our initial game idea and general atmosphere of the project. We then implement these 
+          ideas with the help of our programming team to create a playable prototype. From there, we host playtest 
+          sessions where members of the club play our prototype and give feedback on what can be improved. Then, 
+          we create another prototype to playtest and the cycle continues until we are satisfied with our game. 
+          Along the way, we make sure to host club-wide as well as team-wide discussions to assess the current 
+          direction of our game.
         </p>
       </div>
 
@@ -106,15 +110,17 @@
         <NuxtImg class="item3" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We design, implement, and test the technical features of our game in order to make a game that works 
+          as intended and feels great to play. We design features alongside the game design team and implement 
+          them with game feel, balance, and performance in mind. We also make sure that level and game design 
+          features are easily editable so that the game design team can easily build levels and tweak mechanics. 
+          We also make sure to thoroughly test the features we implement so that they adhere to our desired game 
+          feel and work as intended. 
         </p>
       </div>
 
       <div class="entry">
-        <h2 class="item2" style="text-align: center;">Sound Design</h2>
+        <h2 class="item2" style="text-align: center;">Audio</h2>
         <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item3">
@@ -126,7 +132,7 @@
       </div>
 
       <div class="entry">
-        <h2 class="item1" style="text-align: center;">World Building</h2>
+        <h2 class="item1" style="text-align: center;">Writing</h2>
         <NuxtImg class="item3" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item4">
@@ -239,10 +245,14 @@
   .item3 {
     grid-column-start: 1;
     grid-row-start: 2;
+
+    margin-top: 0px;
   }
 
   .item4 {
     grid-column-start: 2;
     grid-row-start: 2;
+
+    margin-top: 0px;
   }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <a class="logo" href="/">VGDC</a>
+    <NuxtLink class="logo" to="/">VGDC</NuxtLink>
 
     <div style="display: flex; gap: 40px; align-items: center; justify-content: center;">
-      <a :href="LINKS.discord.link" target="_blank"><NuxtImg :src="LINKS.discord.icon" :height="iconHeight"></NuxtImg></a>
-      <a :href="LINKS.linkedin.link" target="_blank"><NuxtImg :src="LINKS.linkedin.icon" :height="iconHeight + 6"></NuxtImg></a>
-      <a :href="LINKS.github.link" target="_blank"><NuxtImg :src="LINKS.github.icon" :height="iconHeight + 6"></NuxtImg></a>
+      <NuxtLink :href="LINKS.discord.link" target="_blank"><NuxtImg :src="LINKS.discord.icon" :height="iconHeight"></NuxtImg></NuxtLink>
+      <NuxtLink :href="LINKS.linkedin.link" target="_blank"><NuxtImg :src="LINKS.linkedin.icon" :height="iconHeight + 6"></NuxtImg></NuxtLink>
+      <NuxtLink :href="LINKS.github.link" target="_blank"><NuxtImg :src="LINKS.github.icon" :height="iconHeight + 6"></NuxtImg></NuxtLink>
     </div>
   </div>
 </template>

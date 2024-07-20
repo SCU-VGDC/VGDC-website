@@ -20,15 +20,18 @@
     MouseConstraint,
     Mouse,
   } from "matter-js";
-
-  const props = defineProps<{
-    width: number,
-    height: number
-  }>()
 </script>
 
 <script lang="ts">
   export default {
+    data: () => {
+      return {
+        bottomBound: Bodies.rectangle(0, 0, 0, 0),
+        rightBound: Bodies.rectangle(0, 0, 0, 0),
+        topBound: Bodies.rectangle(0, 0, 0, 0),
+        leftBound: Bodies.rectangle(0, 0, 0, 0),
+      };
+    },
     methods: {
       getRandomInt(max: number): number {
         return Math.floor(Math.random() * max);
@@ -61,8 +64,7 @@
       const primaryColor = '#DC5F00';
       const darkColor = '#373A40';
       const lightColor = '#EEEEEE';
-      // const width = this.width;
-      // const height = this.height;
+
       const width = window.innerWidth;
       const height = window.innerHeight - 50;
 
@@ -101,6 +103,16 @@
           options: renderOptions,
       });
 
+      // create bounds
+      const boundOptions = {
+        isStatic: true,
+        render: {
+          fillStyle: primaryColor,
+          strokeStyle: darkColor,
+          lineWidth: 1,
+        }
+      };
+      
       var thickness = 100;
 
       var borderHeight = height * 1.25;
@@ -108,39 +120,30 @@
       var halfWidth = width / 2;
       var halfThickness = thickness / 2;
 
-      // create bounds
-      const boundOptions = {
-        isStatic: true,
-        render: {
-          strokeStyle: primaryColor,
-          lineWidth: 0,
-        }
-      };
-      var bottomBound = Bodies.rectangle(
+      this.bottomBound = Bodies.rectangle(
         halfWidth, 
         height + halfThickness, 
         width, 
         thickness, 
         boundOptions);
-      var rightBound = Bodies.rectangle(
+      this.rightBound = Bodies.rectangle(
         width + halfThickness, 
         -halfHeight + height, 
         thickness, 
         borderHeight + (thickness * 2), 
         boundOptions);
-      var topBound = Bodies.rectangle(
+      this.topBound = Bodies.rectangle(
         halfWidth, 
         -halfThickness - borderHeight + height, 
         width, 
         thickness, 
         boundOptions);
-      var leftBound = Bodies.rectangle(
+      this.leftBound = Bodies.rectangle(
         -halfThickness, 
         -halfHeight + height, 
         thickness, 
         borderHeight + (thickness * 2), 
         boundOptions);
-      const boundBodies = [bottomBound, rightBound, topBound, leftBound]
       
       // create objects
       const bodyOptions = {
@@ -184,7 +187,7 @@
       const logoBodies = [vBody, gBody, dBody, cBody];
 
       // add all of the bodies to the world
-      Composite.add(engine.world, [...logoBodies, ...objects, ...boundBodies]);
+      Composite.add(engine.world, [...logoBodies, ...objects, this.bottomBound, this.rightBound, this.topBound, this.leftBound]);
 
       // mouse interactivity
       var canvasMouse = Mouse.create(canvas);
@@ -208,27 +211,28 @@
       var runner = Runner.create();
       Runner.run(runner, engine);
 
-      // // resize event handler
-      // function handleWindowResize() => {
-      //   // get the current window size
-      //   var width = this.width,
-      //       height = document.documentElement.clientHeight;
 
-      //   // set the render size to equal window size
-      //   // @ts-ignore
-      //   Render.setSize(render, width, height * 1.25);
-      //   // @ts-ignore
-      //   // Render.setPixelRatio(render, 'auto');
+      // resize event handler
+      function handleWindowResize() {
+        // get the current window size
+        var width = window.innerWidth,
+            height = window.innerHeight - 50;
 
-      //   // update the render bounds to fit the scene
-      //   Render.lookAt(render, Composite.allBodies(engine.world), {x: -thickness, y:-thickness}, true);
-      // };
+        // set the render size to equal window size
+        // @ts-ignore
+        Render.setSize(render, width, height);
+        // @ts-ignore
+        Render.setPixelRatio(render, 'auto');
 
-      // // add window resize handler
-      // window.addEventListener('resize', handleWindowResize);
+        // update the render bounds to fit the scene
+        Render.lookAt(render, Composite.allBodies(engine.world), {x: -thickness * 1.5, y: -thickness * 2}, true);
+      };
 
-      // // update canvas size to initial window size
-      // handleWindowResize();
+      // add window resize handler
+      window.addEventListener('resize', handleWindowResize);
+
+      // update canvas size to initial window size
+      handleWindowResize();
 
       // add scrolling to the canvas
       render.canvas.addEventListener('wheel', function(event) {

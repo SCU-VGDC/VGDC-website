@@ -5,7 +5,7 @@
     <div style="display: flex; gap: 60px;">
       <a href="/">Home</a>
       <a href="/about">About</a>
-      <a href="/">Project D</a>
+      <a href="/">Wrath's Bargain</a>
       <a @click="goToSection('join')" rel="nofollow">Join Us</a>
     </div>
   </div>

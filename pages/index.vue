@@ -3,8 +3,9 @@
     <NavBar></NavBar>
     
     <section class="hero" id="hero">
-      <!-- <h1 style="font-size: 18.75rem; font-weight: 800; text-align: center;">VGDC</h1> -->
-       <LogoGame :width="logoGameWidth" :height="logoGameHeight"></LogoGame>
+      <LogoGame v-if="isDesktop"></LogoGame>
+
+      <h1 v-else style="font-size: 10rem; font-weight: 800; text-align: center;">VGDC</h1>
     </section>
 
     <Banner background_image="/images/home/Lust_Arena.jpg">
@@ -134,16 +135,12 @@
   export default {
     data: () => {
       return {
-        logoGameWidth: 100,
-        logoGameHeight: 100,
+        isDesktop: true,
       };
     },
     methods: {
       checkScreenSize() {
-        this.logoGameWidth = window.innerWidth;
-        this.logoGameHeight = window.innerHeight - 60;
-
-        //console.log(`${this.logoGameWidth} ${this.logoGameHeight}`);
+        this.isDesktop = window.innerWidth > 660;
       }
     },
     computed: {

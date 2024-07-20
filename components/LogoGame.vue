@@ -181,6 +181,15 @@
         objects[i] = object;
       }
 
+      // silly object
+      const sillyObject = Bodies.circle(width / 2, 0, 75, {render: {
+        sprite: {
+          xScale: 0.19,
+          yScale: 0.19,
+          texture: '/game/Important Image Cropped.png',
+        }
+      }})
+
       // TODO: create VGDC logo body
       const logoCenterX = width / 2;
       const logoCenterY = height / 2;
@@ -192,7 +201,7 @@
       const logoBodies = [vBody, gBody, dBody, cBody];
 
       // add all of the bodies to the world
-      Composite.add(engine.world, [...logoBodies, ...objects, this.bottomBound, this.rightBound, this.topBound, this.leftBound]);
+      Composite.add(engine.world, [...logoBodies, ...objects, sillyObject, this.bottomBound, this.rightBound, this.topBound, this.leftBound]);
 
       // mouse interactivity
       var canvasMouse = Mouse.create(canvas);

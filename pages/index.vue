@@ -4,11 +4,13 @@
     
     <section class="hero" id="hero">
       <div v-if="isDesktop">
-        <LogoGame></LogoGame>
-        <!-- <h2 style="position: absolute; z-index: 1;">
+        <div class="front">
+          <LogoGame></LogoGame>
+        </div>
+        <h2 class="behind" style="text-align: center;">
           Santa Clara University's <br>
           Video Game Development Club
-        </h2> -->
+        </h2>
       </div>
 
       <div v-else style="text-align: center;">
@@ -191,6 +193,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .front {
+    position: relative;
+    z-index: 2;
+  }
+
+  .behind {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   section.info {

@@ -3,9 +3,22 @@
     <NavBar></NavBar>
     
     <section class="hero" id="hero">
-      <LogoGame v-if="isDesktop"></LogoGame>
+      <div v-if="isDesktop">
+        <LogoGame></LogoGame>
+        <!-- <h2 style="position: absolute; z-index: 1;">
+          Santa Clara University's <br>
+          Video Game Development Club
+        </h2> -->
+      </div>
 
-      <h1 v-else style="font-size: 10rem; font-weight: 800; text-align: center;">VGDC</h1>
+      <div v-else style="text-align: center;">
+        <h1 style="font-size: 10rem; font-weight: 800; margin-bottom: 0px;">VGDC</h1>
+
+        <h2 style="font-size: 2rem; margin-top: 0px;">
+          Santa Clara University's <br>
+          Video Game Development Club
+        </h2>
+      </div>
     </section>
 
     <Banner background_image="/images/home/Lust_Arena.jpg">

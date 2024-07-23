@@ -26,7 +26,7 @@
     <Banner background_image="/images/home/Lust_Arena.jpg">
       <p style="font-size: var(--medium); opacity: 1.0">
         Check out our current Project: <br>
-        <a href="/" style="color: var(--light)">Wrath's Bargain</a>
+        <NuxtLink to="/" style="color: var(--light)">Wrath's Bargain</NuxtLink>
       </p>
     </Banner>
 
@@ -35,7 +35,7 @@
         <h1 style="margin-bottom: 10px;">Welcome to SCU's Video Game Development Club (VGDC)!</h1>
         <p style="margin-top: 0px;">
           All skill levels and majors welcome! No experience needed :) <br>
-          <a @click="goToSection('join')" rel="nofollow">Join us</a>
+          <NuxtLink @click="goToSection('join')" rel="nofollow">Join us</NuxtLink>
         </p>
       </div>
 
@@ -56,7 +56,7 @@
         <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item3">
-          Our club meets weekly in <a href="https://www.scu.edu/map/l/Learning-Commons-and-Library" target="_blank">LC 203</a> from 5:00 pm to 7:00 pm. Feel free to stop 
+          Our club meets weekly in <NuxtLink to="https://www.scu.edu/map/l/Learning-Commons-and-Library" target="_blank">LC 203</NuxtLink> from 5:00 pm to 7:00 pm. Feel free to stop 
           by :) No experience needed!
         </p>
       </div>
@@ -66,7 +66,7 @@
         <NuxtImg class="item3" src="/images/home/boba_run.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item4">
-          Join at any time of the year! Feel free to join our <a :href="LINKS.discord.link" target="_blank">Discord</a> 
+          Join at any time of the year! Feel free to join our <NuxtLink :to="LINKS.discord.link" target="_blank">Discord</NuxtLink> 
           to learn more and check out what we are working on
         </p>
       </div>
@@ -98,10 +98,12 @@
         <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We create concept art, sprites, and animations to bring our game to life. Our concept art helps us 
+          to better plan the atmosphere of our game and help everyone involved to understand what characters, 
+          enemies, and environments look like and act. Our sprites and animations give our game life and help 
+          to implement the atmosphere of our game. We also make sure to design our environment, characters, 
+          enemies, and UI elements with visual clarity in mind. We also create standards for our art so that 
+          multiple artists can create sprites and animations in a unified and consistent artstyle. 
         </p>
       </div>
 
@@ -124,10 +126,16 @@
         <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          The audio team at VGDC consists of both music and sound design. We adopt a player first mentality 
+          that focuses on elevating the player's experience using sound. In addition, the majority of focus 
+          is on sound design, while music will typically be created as needed later when the game is more 
+          developed. Both music and sound have preset general standards to maximize consistency across the 
+          board—whether that be a tone, keyword, or genre. <br><br>
+
+          Members can use any DAW they wish, and workflow is an iterative approach. When a sound asset is 
+          produced it is typically sent to the sound design discord channel for constructive feedback. Most 
+          importantly, we monitor and work closely with other teams to maximize collaboration and have fun 
+          creating!
         </p>
       </div>
 
@@ -136,10 +144,10 @@
         <NuxtImg class="item3" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
 
         <p class="item4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We design and write the world, plot, and characters for our project to create an immersive game 
+          inhabited by believable characters with an engaging plot. To do this, we host club-wide and team-wide 
+          discussions to expand off of our initial project idea. We then iterate on these ideas as development 
+          progresses; changing and re-writing anything that no longer makes sense or fits the game's atmosphere. 
         </p>
       </div>
     </section>
@@ -228,8 +236,8 @@
 
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 75px;
+    margin-right: 75px;
   }
 
   .item1 {

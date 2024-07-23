@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <a class="logo" href="/">VGDC</a>
+    <NuxtLink class="logo" to="/">VGDC</NuxtLink>
 
     <div style="display: flex; gap: 60px;">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/">Wrath's Bargain</a>
-      <a @click="goToSection('join')" rel="nofollow">Join Us</a>
+      <NuxtLink to="/">Home</NuxtLink>
+      <NuxtLink to="/about">About</NuxtLink>
+      <NuxtLink to="/">Wrath's Bargain</NuxtLink>
+      <NuxtLink @click="goToSection('join')" rel="nofollow">Join Us</NuxtLink>
     </div>
   </div>
 </template>

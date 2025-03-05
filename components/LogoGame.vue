@@ -8,6 +8,8 @@
 </template>
 
 <script lang="ts" setup>
+  import pkg from 'matter-js';
+
   import {
     Engine,
     Render,

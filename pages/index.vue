@@ -95,7 +95,12 @@
 
       <div class="entry">
         <h2 class="item2" style="text-align: center;">Art</h2>
-        <NuxtImg class="item4" src="/images/home/group_pic.jpg" :sizes="imgEntrySizes"/>
+        <JustifiedGrid class="item4" style="width:500px;" :columnRange="[2,2]" :gap="10" :isCroppedSize="true">
+          <NuxtImg src="/images/home/art/Fallen_Angel_Concept.JPG" height="200" quality="100" />
+          <NuxtImg src="/images/home/art/height_comparison.png" height="200" quality="100" />
+          <NuxtImg src="/images/home/art/lust_teleport.gif" height="200" quality="100" />
+          <NuxtImg src="/images/home/art/Female_Tank.JPG" height="200" quality="100" />
+        </JustifiedGrid>
 
         <p class="item3">
           We create concept art, sprites, and animations to bring our game to life. Our concept art helps us 
@@ -158,6 +163,8 @@
 
 <script lang="ts" setup>
   import { LINKS, goToSection } from '~/constants/index';
+
+  import { JustifiedGrid } from '@egjs/vue-grid';
 </script>
 
 <script lang="ts">

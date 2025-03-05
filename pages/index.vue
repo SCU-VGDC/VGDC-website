@@ -163,11 +163,12 @@
 
 <script lang="ts" setup>
   import { LINKS, goToSection } from '~/constants/index';
-
-  import { JustifiedGrid } from '@egjs/vue-grid';
 </script>
 
 <script lang="ts">
+  import * as pkg from '@egjs/vue-grid'; 
+  const { JustifiedGrid } = pkg;
+
   export default {
     data: () => {
       return {

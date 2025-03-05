@@ -7,23 +7,11 @@
   <div id="matter-game" style="display: flex; justify-content: center; align-items: center;"></div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
   import pkg from 'matter-js';
 
-  import {
-    Engine,
-    Render,
-    Runner,
-    Bodies,
-    Svg,
-    Vertices,
-    Composite,
-    MouseConstraint,
-    Mouse,
-  } from "matter-js";
-</script>
+  const { Bodies, Svg, Vertices, Engine, Render, Composite, Mouse, MouseConstraint, Runner } = pkg;
 
-<script lang="ts">
   export default {
     data: () => {
       return {

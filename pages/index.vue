@@ -1,7 +1,6 @@
 <template>
   <div>
     <NavBar></NavBar>
-    
     <section class="hero" id="hero">
       <div v-if="isDesktop">
         <div class="front">

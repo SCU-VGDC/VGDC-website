@@ -52,7 +52,7 @@
 
       const primaryColor = '#DC5F00';
       const darkColor = '#373A40';
-      const lightColor = '#EEEEEE';
+      const lightColor = '#862732';
 
       const width = 1750;
       const height = window.innerHeight - 65;

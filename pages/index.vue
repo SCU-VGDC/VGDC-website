@@ -6,7 +6,7 @@
         <div class="front">
           <LogoGame></LogoGame>
         </div>
-        <h2 class="behind" style="text-align: center;">
+        <h2 class="behind" style="text-align: center; color: var(--hero-subtext);">
           Santa Clara University's <br>
           Video Game Development Club
         </h2>
@@ -15,7 +15,7 @@
       <div v-else style="text-align: center;">
         <h1 style="font-size: 10rem; font-weight: 800; margin-bottom: 0px;">VGDC</h1>
 
-        <h2 style="font-size: 2rem; margin-top: 0px;">
+        <h2 style="font-size: 2rem; margin-top: 0px; color: var(--hero-subtext);">
           Santa Clara University's <br>
           Video Game Development Club
         </h2>

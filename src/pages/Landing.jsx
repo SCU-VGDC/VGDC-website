@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LandingCarousel from '../components/LandingCarousel';
-import VGDCLogoController from '../assets/vgdc_logo_controller.png'
+import VGDCLogoController from '../assets/vgdc_logo_big.png'
 
 function Landing() {
   const [currentStatIndex, setCurrentStatIndex] = useState(0);
@@ -21,7 +21,7 @@ function Landing() {
     <div className="landing-page">
       <section className="hero-section">
         <div className="container">
-          <img src={VGDCLogoController}  />
+          <img src={VGDCLogoController} className='landing-logo' />
           <h1 id = "welcome" >VGDC</h1>
           <p className="subtitle">SCU's Video Game Design Club</p>
         </div>

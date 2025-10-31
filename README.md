@@ -1,14 +1,7 @@
 # VGDC
 
 This is the repo for the VGDC website.
-
-
-[VGDC Landing Page](https://github.com/user-attachments/assets/8f8e441b-3e89-4666-b8cb-1d1d0ee64d3f)
-
-![VGDC Dark Mode](https://github.com/user-attachments/assets/ded4e780-8e5a-414c-b8fa-52db9164de09)
-
-
-## Core Technologies
+## What was used
 
   * **Framework:** React 19
   * **Bundler:** Vite

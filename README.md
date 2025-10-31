@@ -1,75 +1,68 @@
-# Nuxt 3 Minimal Starter
+# VGDC
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the repo for the VGDC website.
 
-## Setup
 
-Make sure to install the dependencies:
+[VGDC Landing Page](https://github.com/user-attachments/assets/8f8e441b-3e89-4666-b8cb-1d1d0ee64d3f)
 
-```bash
-# npm
-npm install
+![VGDC Dark Mode](https://github.com/user-attachments/assets/ded4e780-8e5a-414c-b8fa-52db9164de09)
 
-# pnpm
-pnpm install
 
-# yarn
-yarn install
+## Core Technologies
 
-# bun
-bun install
-```
+  * **Framework:** React 19
+  * **Bundler:** Vite
+  * **Mapping & Visualization:**
+      * Deck.gl (Core, Layers, React)
+      * Google Maps (via `@vis.gl/react-google-maps`)
+      * Mapbox GL (via `react-map-gl`)
+  * **Routing:** React Router
+  * **Styling:** Sass (SCSS)
+  * **State Management:** `@plq/use-persisted-state` for persistent state
+  * **Linting:** ESLint
 
-## Development Server
+-----
 
-Start the development server on `http://localhost:3000`:
+## Prerequisites
 
-```bash
-# npm
-npm run dev
+Before you begin, ensure you have Node.js installed on your system.
 
-# pnpm
-pnpm run dev
+  * **Node.js:** This project requires version **`>=22.12.0`** as specified in `package.json`.
 
-# yarn
-yarn dev
+-----
 
-# bun
-bun run dev
-```
 
-## Production
+## Available Scripts
 
-Build the application for production:
+This project comes with several pre-configured npm scripts:
 
-```bash
-# npm
-npm run build
+### `npm run dev`
 
-# pnpm
-pnpm run build
+Runs the application in development mode with hot-reloading. The server is configured to be accessible from your local network (it listens on `0.0.0.0`).
 
-# yarn
-yarn build
+### `npm run build`
 
-# bun
-bun run build
-```
+Builds the application for production. This script bundles your code and optimizes it, outputting the static files to the `dist` directory.
 
-Locally preview production build:
+### `npm run preview`
 
-```bash
-# npm
-npm run preview
+Starts a local static web server that serves the production-built files from the `dist` directory. This is useful for verifying that the production build works correctly before deploying.
 
-# pnpm
-pnpm run preview
+### `npm run lint`
 
-# yarn
-yarn preview
+Runs the ESLint linter across the project to check for code quality and style issues, based on the rules in `eslint.config.js`.
 
-# bun
-bun run preview
-```
+-----
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Server Configuration
+
+The Vite configuration (`vite.config.js`) is set up to allow access from specific domains and IP addresses for both the development and preview servers. This is intended for deployment on a server, such as an AWS EC2 instance.
+
+**Allowed Hosts Include:**
+
+  * `crash-cast.com`
+  * `www.crash-cast.com`
+  * `13.216.14.117`
+  * `ec2-54-85-61-166.compute-1.amazonaws.com`
+
+The provided `start.sh` script suggests a deployment flow of pulling from Git, installing dependencies, building the project, and running the development server. For a production deployment, you would typically use `npm run preview` or a dedicated static file server.

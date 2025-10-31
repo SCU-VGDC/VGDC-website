@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MapCenterContext } from '../context/MapCenterContext';
 import LandingCarousel from '../components/LandingCarousel';
 const stats = [
   { number: '7%', text: 'Increase in fatalities for every 10-minute increase in ambulance journey time.' },

@@ -9,9 +9,17 @@
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+}
+
+.main-nav {
+  justify-self: center;
+}
+
+.toggle-n-search {
+  justify-self: end;
 }
 
 .logo {

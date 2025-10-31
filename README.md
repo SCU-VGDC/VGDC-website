@@ -51,11 +51,4 @@ Runs the ESLint linter across the project to check for code quality and style is
 
 The Vite configuration (`vite.config.js`) is set up to allow access from specific domains and IP addresses for both the development and preview servers. This is intended for deployment on a server, such as an AWS EC2 instance.
 
-**Allowed Hosts Include:**
-
-  * `crash-cast.com`
-  * `www.crash-cast.com`
-  * `13.216.14.117`
-  * `ec2-54-85-61-166.compute-1.amazonaws.com`
-
 The provided `start.sh` script suggests a deployment flow of pulling from Git, installing dependencies, building the project, and running the development server. For a production deployment, you would typically use `npm run preview` or a dedicated static file server.

@@ -95,7 +95,6 @@ const LandingCarousel = ({
         </circle>
       </svg>
       
-      {/* 4. AMBULANCE (z-index: 4) */}
       {/* <LandingAmbulance /> */}
     </div>
   );

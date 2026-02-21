@@ -23,7 +23,13 @@
 }
 
 /* ======== base styles ======== */
+html {
+  overflow-x:hidden!important;
+  width: 100%;
+}
 body {
+  overflow-x:hidden!important;
+  position: relative;
   margin: 0;
   background-color: #f4f7f6;
   color: var(--dark-color);

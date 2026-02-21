@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { DarkModeToggle } from './DarkToggle'
+import { DarkModeToggle } from './DarkToggle.tsx'
 import logo from '../assets/vgdc_logo_horizontal2.png'
 
 function Header(): React.ReactElement {

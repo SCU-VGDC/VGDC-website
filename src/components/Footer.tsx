@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-function Footer() {
+function Footer(): React.ReactElement {
   return (
     <footer className="site-footer">
       <div className="container">
@@ -11,7 +11,7 @@ function Footer() {
         </nav>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

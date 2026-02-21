@@ -1,0 +1,95 @@
+import React, { useState, useEffect } from 'react'
+import WheelsFront from '../assets/ambulance_wheels_front.png'
+import WheelsRear from '../assets/ambulance_wheels_rear.png'
+import AmbulanceBody from '../assets/ambulance_body.png'
+import Headlights from '../assets/ambulance_headlights.png'
+
+function LandingAmbulance(): React.ReactElement {
+  const [yOffset, setYOffset] = useState<number>(0)
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
+
+  useEffect(() => {
+    let start: number | null = null
+    let animationId: number | null = null
+    const amplitude = 5
+    const speed = 0.005
+    const animate = (timestamp: number): void => {
+      if (!start) start = timestamp
+      const progress = timestamp - start
+      setYOffset(Math.sin(progress * speed) * amplitude)
+      animationId = requestAnimationFrame(animate)
+    }
+    animationId = requestAnimationFrame(animate)
+
+    return () => {
+      if (animationId !== null) {
+        cancelAnimationFrame(animationId)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    const checkDarkMode = (): void => {
+      setIsDarkMode(document.body.classList.contains('dark'))
+    }
+
+    checkDarkMode()
+    const observer = new MutationObserver(checkDarkMode)
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class'],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      className="ambulance-container"
+      style={{
+        position: 'relative',
+        width: '50px',
+        height: '50px',
+        overflow: 'visible',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-420%, -420%) scale(0.5)',
+        transformOrigin: 'center',
+        zIndex: 3,
+      }}
+    >
+      <img
+        src={WheelsRear}
+        alt="Wheels Rear"
+        className="wheels-rear"
+        style={{ position: 'absolute', top: 0, left: 0 }}
+      />
+      <img
+        src={AmbulanceBody}
+        alt="Ambulance Body"
+        className="ambulance-body"
+        style={{ position: 'absolute', top: `${yOffset}px`, left: 0 }}
+      />
+      <img
+        src={Headlights}
+        alt="Headlights"
+        className="headlights"
+        style={{
+          position: 'absolute',
+          top: `${yOffset}px`,
+          left: 0,
+          opacity: isDarkMode ? 1 : 0,
+          transition: 'opacity 0.5s ease',
+        }}
+      />
+      <img
+        src={WheelsFront}
+        alt="Wheels Front"
+        className="wheels-front"
+        style={{ position: 'absolute', top: 0, left: 0 }}
+      />
+    </div>
+  )
+}
+
+export default LandingAmbulance

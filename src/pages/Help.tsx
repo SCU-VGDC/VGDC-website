@@ -1,45 +1,27 @@
 import React from 'react'
 
-function Help() {
+function Help(): React.ReactElement {
   return (
     <div style={{ width: '100%' }}>
       <section className="sidebar-widget">
         <h2>Help & User Guide</h2>
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
       <section className="sidebar-widget">
-        
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
       <section className="sidebar-widget">
-        
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
       <section className="sidebar-widget">
-        
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
       <section className="sidebar-widget">
-        
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
       <section className="sidebar-widget">
-        
-        <p>
-          Help
-        </p>
+        <p>Help</p>
       </section>
-    
     </div>
   )
 }

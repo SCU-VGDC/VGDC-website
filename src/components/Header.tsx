@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { DarkModeToggle } from './DarkToggle';
-import logo from '../assets/vgdc_logo_horizontal2.png';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { DarkModeToggle } from './DarkToggle'
+import logo from '../assets/vgdc_logo_horizontal2.png'
 
-function Header() {
+function Header(): React.ReactElement {
   return (
     <header className="site-header">
       <div className="container header-content">
         <div className="logo">
-          {/* CHANGE: Link to root path ("/") */}
           <Link to="/">
-            <img src={logo}  className="logo-img" />
+            <img src={logo} className="logo-img" alt="VGDC" />
           </Link>
         </div>
         <nav className="main-nav">
@@ -20,12 +19,12 @@ function Header() {
             <li><Link to="/help">Help</Link></li>
           </ul>
         </nav>
-        <div className='toggle-n-search'>
-          <DarkModeToggle/>
+        <div className="toggle-n-search">
+          <DarkModeToggle />
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
